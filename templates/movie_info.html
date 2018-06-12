@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/style_for_movie_info.css">
+        <link rel="shortcut icon" type="image/png" href="../static/img/movie.png"/>
+
+        <title>My Movies </title>
+    </head>
+
+   <body>
+
+        <div class="body">
+
+            <div class="img">
+                <img src="{{ result['poster_path'] }}">
+            </div>
+
+            <br>
+
+            <h1 id="title"> {{ result['title'] }} </h1>
+
+            <div class="description">
+
+                <h2> Description </h2>
+
+                <div class="genres">
+                    <p>{% for genre_type in result['genres']%}
+                        {{ genre_type['name'] }} &nbsp
+                    {% endfor %}</p>
+                </div>
+                <h3> {{ result['overview'] }} </h3>
+
+
+                <div class="rottentomatoes">
+                    <table border="0" align="right">
+                        <tr>
+                            <td>Tomatometer:   </td>
+                            <td>{{ result['tomatoes_rates'][0] }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Audience Score:</td>
+                            <td>{{ result['tomatoes_rates'][1] }}%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="imdb">
+                    <p><b>IMDB rating: {{ result['imdb_rating'] }}</b></p>
+                </div>
+
+
+            </div>
+
+            <div class="reviews">
+                <h2> Reviews </h2>
+                <p style="position: relative; left: 50px; font-size: 14px;"> TOP reviews:</p>
+
+            </div>
+        </div>
+
+
+      </table>
+   </body>
+
+</html>

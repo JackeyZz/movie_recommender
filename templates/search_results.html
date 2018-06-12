@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_for_search_results.css') }}"></link>
+        <link rel="shortcut icon" type="image/png" href="../static/img/movie.png"/>
+        <title>My Movies</title>
+    </head>
+
+   <body>
+
+        <div class="res_sequence" style="align:center;">
+			<table border="1">
+			<tr>
+				<th>MoviesID</th>
+				<th>Title</th>
+				<th>Genres</th>
+			</tr>
+			{% for value in result %}
+				<tr>
+					{% for val in value %}
+						<td> {{ val }} </td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+			</table>
+        </div>
+
+   </body>
+
+</html>

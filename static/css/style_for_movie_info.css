@@ -1,0 +1,99 @@
+h3 {
+    color: #464768;
+    font-family: "Alegreya Sans SC Font";
+    font-weight: 100;
+    font-size: 18px;
+    font-style: oblique;
+}
+img {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 300px;
+}
+h1 {
+    text-align: center;
+    position: relative;
+    top: -28px;
+    color: #180b70; //#2A4149;
+    font-family: "Alegreya Sans SC Font";
+    font-weight: 100;
+    font-size: 25px;
+}
+
+h2 {
+    position: relative;
+    left: 50px;
+    color: #180b70; //#2A4149;
+    font-family: "Alegreya Sans SC Font";
+    font-weight: 100;
+    font-style: oblique;
+}
+p {
+    color:  #494f7a;
+}
+.rottentomatoes table{
+    color: #f44268;
+}
+.genres p{
+    position: relative;
+    left: 25px;
+    font-family: "Alegreya Sans SC Font";
+    font-size: 14px;
+}
+
+.description {
+    position: relative;
+    top: -40px;
+    float: left;
+    width: 22%;
+    padding: 20px;
+}
+
+/* .reviews div{
+    position: relative;
+    top: -100px;
+    border-style: solid;
+    border-color: red;
+} */
+/* .body div {
+
+    border-style: solid;
+    border-color: blue;
+} */
+
+.img {
+    float: left;
+    width: 22%;
+    padding: 20px;
+}
+.reviews {
+    position: relative;
+    top: -40px;
+    float: left;
+    width: 22%;
+    padding: 15px;
+}
+.body::after {
+
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.imdb p{
+    color: #c9c042; //#d1c740;
+    /* text-shadow: -0.5px 0 #7a7424, 0 0.5px #7a7424, 0.5px 0 #7a7424, 0 -0.5px #7a7424; */
+    border-color: red;
+}
+
+
+#title {
+    color: #180b70;
+}
+/* div {
+    width: 30%;
+    position: relative;
+    right: 30px;
+    top: 0;
+
+} */

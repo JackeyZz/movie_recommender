@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Home</title>
+<!-- core CSS -->
+<link href="../static/css1/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/animate.min.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/owl.transitions.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/prettyPhoto.css" rel="stylesheet" type="text/css">  
+<link href="../static/css1/magnific-popup.css" rel="stylesheet" type="text/css">  
+<link href="../static/css1/gallery-1.css" rel="stylesheet" type="text/css">
+<link href="../static/css1/styles.css" rel="stylesheet" type="text/css"> 
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->       
+<link rel="shortcut icon" href="../static/images/ico/favicon.ico"> 
+
+<!--表格样式-->
+<style type="text/css">  
+        table {  
+            border: #888FEA 1px solid;  
+            border-spacing: 0px;  
+            text-align: center;  
+        }  
+        th, tr, td {  
+            border: #888FEA 1px solid;  
+        }  
+        th {  
+            background-color: #98AEFD;  
+        }  
+        #id {  
+            width: 40px;  
+        }  
+        #c1 {  
+            width: 150px;  
+        }  
+</style>
+
+</head> 
+
+<body id="home">
+
+<header id="header">
+	<nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="../static/images/logo1.png" alt="logo"></a>
+			</div>
+			
+			<div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="scroll active"><a href="#home">电影信息</a></li> 
+					<li class="scroll"><a href="#services">推荐1-同类型</a></li>
+					<li class="scroll"><a href="#about">推荐2-个人偏好</a></li>
+					<li class="scroll"><a href="#portfolio">推荐3-他人偏好</a></li>
+				</ul>
+			</div>
+		</div><!--/.container-->
+	</nav><!--/nav-->
+</header><!--/header-->
+
+<section id="main-slider">
+	<div class="owl-carousel">
+		<div class="item" style="background-image: url(../static/images/slider/bg1.jpg);">
+			<div class="slider-inner">
+				<div class="container">
+					<div class="row"> 
+						<div class="carousel-caption">
+							<div class="carousel-content">
+								<h2>Best Corporate</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p> 
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div><!--/.item-->
+		 <div class="item" style="background-image: url(../static/images/slider/bg2.jpg);">
+			<div class="slider-inner">
+				<div class="container">
+					<div class="row"> 
+						<div class="carousel-caption">
+							<div class="carousel-content">
+								<h2>Sky is Limit</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod.</p> 
+							</div>
+						</div>
+						</div>
+					</div> </div>
+				</div>
+			</div>
+		</div><!--/.item-->
+	</div><!--/.owl-carousel-->
+</section><!--/#main-slider-->
+
+<section id="hero-text" class="wow fadeIn">
+	<div class="container">`
+		<div class="row">
+			<!-- <div class="col-sm-9">
+				<h2>输入的电影信息</h2>
+				<table border="1">
+					<tr>
+						<th>MoviesID</th>
+						<th>Title</th>
+						<th>Genres</th>
+					</tr>
+					<tr>
+						{% for val in movie %}
+							<td> {{ val }} </td>
+						{% endfor %}
+					</tr>
+			</table>
+			</div> -->
+			<div class="col-sm-9">
+			<h2>输入的电影信息</h2>
+				<table border="1">
+					<tr>
+						<th>MoviesID</th>
+						<th>Title</th>
+						<th>Genres</th>
+					</tr>
+					<tr>
+						{% for val in movie %}
+							<td> {{ val }} </td>
+						{% endfor %}
+					</tr>
+			</table>
+			<h2></h2>
+			<h2></h2>
+			
+			<h2>用户 {{ userID }} 观看movie记录列表:</h2>
+			 <table style="width: 600px;">  
+				<tr>  
+					<th width="60px">MoviesID</th>
+					<th width="240px">Title</th>
+					<th width="240px">Genres</th>
+					<th width="60px">Ratings</th>  
+				</tr>  
+			<tr>  
+            <td colspan="4">  
+                <div id="list" style="overflow-x: hidden; width: 100%; height: 120px;"> <!-- 这个是核心 -->  
+                    <table style="margin: -2px -2px -2px -2px; width: 100%; border: 0px">  
+                        {% for value in userMovie %}
+						<tr>
+							{% for val in value %}
+							<td> {{ val }} </td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+                    </table>  
+					</div>  
+				</td>  
+			</tr>  
+		</table>
+		</div>
+			<div class="col-sm-3 text-right">
+				<img src="../static/images/team/03.jpg" class="img-responsive" alt="2nd gallery Thumb">
+			</div>
+		</div>
+	</div>
+</section><!--/#hero-text-->
+
+<section id="services">
+		<!-- Start Gallery 1-2 -->
+<section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
+	
+	<div class="container">
+	
+   <div class="section-header">
+			<h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">推荐1-同类型</h2>
+			<p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">根据输入的电影信息，系统推荐出同种类型的其他电影</p>
+		</div>
+		<!-- <div class="editContent">
+			<ul class="filter">
+				<li class="active"><a href="#" data-filter="*">All</a></li>
+				<li><a href="#" data-filter=".artwork">Artwork</a></li>
+				<li><a href="#" data-filter=".creative">Creative</a></li>
+				<li><a href="#" data-filter=".nature">Nature</a></li>
+				<li><a href="#" data-filter=".outside">Outside</a></li>
+				<li><a href="#" data-filter=".photography">Photography</a></li>
+			</ul>
+		</div> -->
+		<!-- /.gallery-filter -->
+		
+		<div class="row">
+			<div id="isotope-gallery-container">
+				
+				<script type="text/javascript">
+					var index=0;
+				</script>
+				
+				{% for val in recommend1 %}
+				
+				<div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+					<div class="gallery-item">
+						<div class="gallery-thumb">
+							
+							<script language="javascript">
+									index=index+1;
+									var  url = "../static/images/portfolio/"+index+".jpg";
+									document.write('<img src="'+url+'" class="img-responsive" alt=""/>');
+							</script>
+							
+							<!-- <img id="pic1" class="img-responsive" alt=""/> -->
+							
+							<!-- <img id="pic" src="../static/images/portfolio/1.jpg" class="img-responsive" alt="1st gallery Thumb"> -->
+							
+							<div class="image-overlay"></div>
+							<a href="../static/images/portfolio/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+							<a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+							
+						</div>
+						<div class="gallery-details">
+							<div class="editContent">
+								<h5>{{ val[1] }}</h5>
+							</div>
+							<div class="editContent">
+								<p>{{val[0]}}   {{val[2]}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+				
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</section>
+<!--// End Gallery 1-2 -->
+</section><!--/#portfolio-->
+</footer>
+
+<section id="about">
+	<div class="container">
+
+		<div class="section-header">
+			<h2 class="section-title text-center wow fadeInDown">推荐2-个人偏好</h2>
+			<p class="text-center wow fadeInDown">根据输入的用户ID，系统推荐出用户可能喜欢的其他电影</p>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6 wow fadeInLeft">
+				<img id="pic" class="img-responsive" alt=""/>
+				<script type="text/javascript">
+					var  url = "../static/images/about.png";
+					document.getElementById("pic").src = url;
+				</script>
+			  <!--<img class="img-responsive" src="../static/images/about.png" alt="">-->
+			</div>
+
+			<div class="col-sm-6 wow fadeInRight">
+				<h3 class="column-title">电影信息</h3>
+					<table border="1">
+						<tr>
+							<th>MoviesID</th>
+							<th>Title</th>
+							<th>Genres</th>
+						</tr>
+						{% for value in recommend2 %}
+						<tr>
+							{% for val in value %}
+							<td> {{ val }} </td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+					</table>
+					<br></br>
+				<a class="btn btn-primary" href="#">选择观看</a>
+
+			</div>
+		</div>
+	</div>
+</section><!--/#about-->
+
+
+<section id="portfolio">
+		<!-- Start Gallery 1-2 -->
+<section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
+	
+	<div class="container">
+	
+   <div class="section-header">
+			<h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">推荐3-他人偏好</h2>
+			<p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">根据输入的电影，系统推荐出其他看这部电影的用户可能喜欢的电影</p>
+		</div>
+		<!-- <div class="editContent">
+			<ul class="filter">
+				<li class="active"><a href="#" data-filter="*">All</a></li>
+				<li><a href="#" data-filter=".artwork">Artwork</a></li>
+				<li><a href="#" data-filter=".creative">Creative</a></li>
+				<li><a href="#" data-filter=".nature">Nature</a></li>
+				<li><a href="#" data-filter=".outside">Outside</a></li>
+				<li><a href="#" data-filter=".photography">Photography</a></li>
+			</ul>
+		</div> -->
+		<!-- /.gallery-filter -->
+		
+		<div class="row">
+			<div id="isotope-gallery-container">
+				
+				<script type="text/javascript">
+					var index=0;
+				</script>
+				
+				{% for val in recommend3 %}
+				
+				<div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
+					<div class="gallery-item">
+						<div class="gallery-thumb">
+							
+							<script language="javascript">
+									index=index+1;
+									var  url = "../static/images/portfolio/"+index+".jpg";
+									document.write('<img src="'+url+'" class="img-responsive" alt=""/>');
+							</script>
+							
+							<!-- <img id="pic1" class="img-responsive" alt=""/> -->
+							
+							<!-- <img id="pic" src="../static/images/portfolio/1.jpg" class="img-responsive" alt="1st gallery Thumb"> -->
+							
+							<div class="image-overlay"></div>
+							<a href="../static/images/portfolio/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+							<a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+							
+						</div>
+						<div class="gallery-details">
+							<div class="editContent">
+								<h5>{{ val[1] }}</h5>
+							</div>
+							<div class="editContent">
+								<p>{{val[0]}}   {{val[2]}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+				
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</section>
+<!--// End Gallery 1-2 -->
+</section><!--/#portfolio-->
+
+
+
+
+</footer><!--/#footer-->
+
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/owl.carousel.min.js"></script>
+<script src="../static/js/mousescroll.js"></script>
+<script src="../static/js/smoothscroll.js"></script>
+<script src="../static/js/jquery.prettyPhoto.js"></script> 
+<script src="../static/js/jquery.inview.min.js"></script>
+<script src="../static/js/wow.min.js"></script>
+<script src="contact/jqBootstrapValidation.js"></script>
+<script src="contact/contact_me.js"></script>
+
+<script type="text/javascript" src="../static/js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
+<script type="text/javascript" src="../static/js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
+ 
+<script src="../static/js/custom-scripts.js"></script>
+</body>
+</html>

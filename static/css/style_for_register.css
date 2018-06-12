@@ -1,0 +1,83 @@
+
+
+img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.center {
+    position: relative;
+    top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.iconauthor {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #2A4149;
+}
+
+
+h3 {
+    position: relative;
+    color: #2A4149; //#272125;
+    font-family: "Alegreya Sans SC Font";
+    font-style: oblique;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+h4{
+    color: #2A4149;
+    font-family: "Alegreya Sans SC Font";
+    font-style: oblique;
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+
+form{
+    color: white;
+    text-align: center;
+}
+input{
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+    color: #2A4149;
+    font-family: "Alegreya Sans SC Font";
+
+}
+button{
+    top: 10%;
+    height: 25px;
+    width: 25px;
+    border-color: #1BBC9B;
+    border-radius: 50%;
+    color: #2A4149;
+    background-color: white;
+    text: bold;
+    text-align: center;
+    line-height: 50%;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Alegreya Sans SC Font";
+}
+
+
+.iconauthor {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #2A4149;
+}

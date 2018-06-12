@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/style_for_register.css">
+        <link rel="shortcut icon" type="image/png" href="../static/img/movie.png"/>
+        <title>
+            InRegistration
+        </title>
+    </head>
+
+    <body>
+        <img src="../static/img/background_mountain.jpg">
+        <h3>Register and enjoy Your Movies:) </h3>
+        <form class="center" method="POST" action="{{ url_for('register') }}">
+            <h3>username:</h3>
+            <input name="user_name" type="text"/>
+            <br>
+            <h3>email:</h3>
+            <input name="email" type="text"/>
+            <br>
+            <h3>secret_word:</h3>
+            <input name="password" type="text"/>
+            <br>
+            <h3>password:</h3>
+            <input name="secret_word" type="text"/>
+            <br><br>
+            <button type="submit">R</button>
+        </form>
+    </body>
+</html>

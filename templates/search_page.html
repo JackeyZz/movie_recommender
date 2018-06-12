@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style_for_search.css">
+        <link rel="shortcut icon" type="image/png" href="../static/img/movie.png"/>
+        <title> My Movies</title>
+    </head>
+
+    <body>
+        <img src="../static/img/hollywood.jpg">
+        <form class="center" method="POST" action="{{ url_for('repr_movie_search_res') }}">
+            <div>
+				<h3>Your UserID:</h3>
+                <input name="User_ID" type="text" />
+                <h3>Watching MovieID:</h3>
+                <input name="Movie_ID" type="text" />
+                <button type="submit"><i class="fa fa-arrow-circle-o-right"></i></button>
+            </div>
+            <br>
+        </form>
+        <!-- <h4 id="after">New on this week:</h4> -->
+       
+    </body>
+
+    <!-- //background-color #00293C //#1BBC9B; //#00293C //#D0E1F9; -->
+<html>

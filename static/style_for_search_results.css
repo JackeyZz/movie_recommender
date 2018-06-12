@@ -1,0 +1,23 @@
+.single_res {
+    float: left;
+    width: 30%;
+    padding: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.res_sequence::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1 {position: relative;
+    color: #2A4149;
+    font-family: "Alegreya Sans SC Font";
+    font-style: oblique;
+    text-align: center;
+    font-weight: 100;
+}
